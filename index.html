@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,500;1,600&family=Big+Shoulders+Display:wght@700&family=Hanken+Grotesk:wght@500;700;800&family=Kumbh+Sans:wght@400;700&family=League+Spartan:wght@400;500;700&family=Lexend+Deca&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Social proof section</title>
+  <style>
+    @import url(https://fonts.google.com/specimen/League+Spartan);
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100vh;
+      font-family: 'League Spartan', sans-serif;
+      background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+      background-position: right 100% bottom 100%, right 0% bottom 0%;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      max-width: 75%;
+      flex-wrap: wrap;
+    }
+
+    .ankith {
+      display: flex;
+      width: 100%;
+    }
+
+    .first {
+      width: 50%;
+    }
+
+    .head {
+      font-weight: 700;
+      font-size: 4.0625rem;
+      /* 65px converted to rem */
+      color: hsl(300, 43%, 22%);
+    }
+
+    .para {
+      margin-top: 1.875rem;
+      /* 30px converted to rem */
+      font-size: 1.25rem;
+      /* 20px converted to rem */
+      padding-right: 4.375rem;
+      /* 70px converted to rem */
+      color: hsl(303, 10%, 53%);
+    }
+
+    .second {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 60%;
+    }
+
+    .review,
+    .report,
+    .besttech {
+      display: flex;
+      border-radius: 0.625rem;
+      height: auto;
+      /* 10px converted to rem */
+    }
+
+    .star {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .review p,
+    .report p,
+    .besttech p {
+      padding-left: 2.125rem;
+      /* 34px converted to rem */
+      padding-top: 0.25rem;
+      /* 4px converted to rem */
+      font-weight: 700;
+      color: hsl(300, 43%, 22%);
+    }
+
+    .review {
+      padding: 1.25rem 2.125rem;
+      /* 20px 34px converted to rem */
+      margin-left: 3.125rem;
+      /* 50px converted to rem */
+      background-color: hsl(300, 24%, 96%);
+      margin-bottom: 0.625rem;
+      /* 10px converted to rem */
+      margin-right: 8.75rem;
+      /* 140px converted to rem */
+    }
+
+    img {
+      padding: 0.1875rem;
+      height: 0.9375rem;
+      display: flex;
+      justify-content: center;
+
+
+      /* 3px converted to rem */
+    }
+
+    .report {
+      padding: 1.25rem 2.125rem;
+      /* 20px 34px converted to rem */
+      margin-left: 6.875rem;
+      /* 110px converted to rem */
+      background-color: hsl(300, 24%, 96%);
+      margin-bottom: 0.625rem;
+      /* 10px converted to rem */
+      margin-right: 5.625rem;
+      /* 90px converted to rem */
+    }
+
+    .besttech {
+      padding: 1.25rem 2.125rem;
+      /* 20px 34px converted to rem */
+      margin-left: 11.25rem;
+      /* 180px converted to rem */
+      background-color: hsl(300, 24%, 96%);
+      margin-bottom: 0.625rem;
+      /* 10px converted to rem */
+    }
+
+    .bio {
+      display: flex;
+      font-weight: bold;
+    }
+
+    .verify {
+      margin-top: 0.25rem;
+      /* 4px converted to rem */
+      font-size: 0.8125rem;
+      /* 13px converted to rem */
+      color: hsl(333, 80%, 67%);
+    }
+
+    .detail {
+      padding: 0.5625rem 0.5625rem;
+      /* 9px 9px converted to rem */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .patel {
+      display: flex;
+      min-width: 100%;
+    }
+
+    .profile {
+      margin: 1.0625rem;
+      /* 17px converted to rem */
+      background-color: hsl(300, 43%, 22%);
+      color: white;
+      border-radius: 0.625rem;
+      /* 10px converted to rem */
+      width: 50%;
+      padding: 2.5rem;
+      /* 40px converted to rem */
+    }
+
+    .colton {
+      margin-left: 0;
+      margin-bottom: 5rem;
+      /* 80px converted to rem */
+    }
+
+    .irene {
+      margin-top: 2.5rem;
+      /* 40px converted to rem */
+      margin-bottom: 2.5rem;
+      /* 40px converted to rem */
+    }
+
+    .anne {
+      margin-right: 0;
+      margin-top: 5rem;
+      /* 80px converted to rem */
+      margin-bottom: 0;
+    }
+
+    .patel img {
+      border-radius: 50%;
+      height: 2.1875rem;
+      /* 35px converted to rem */
+    }
+
+    .data {
+      margin-top: 1.5625rem;
+      /* 25px converted to rem */
+    }
+
+    @media (max-width:1024px) {
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+        background-repeat: no-repeat;
+
+      }
+
+      .container {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0 9%;
+
+      }
+
+      .ankith {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .ankith .second {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+
+      }
+
+      .first {
+        width: 100%;
+      }
+
+      .head {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        font-size: 2.5rem;
+      }
+
+      .para {
+        width: 100%;
+        text-align: center;
+      }
+
+      .review,
+      .report,
+      .besttech {
+        width: 100%;
+        margin: 2% 0;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 0;
+      }
+
+      .patel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+      }
+
+      .colton,
+      .irene,
+      .anne {
+        width: 100%;
+        margin: 2% 0;
+        height: auto;
+        padding: 2%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="ankith">
+      <div class="first">
+        <div class="head">
+          10,000+ of our users love our products.
+        </div>
+        <div class="para">
+          We only provide great products combined with excellent customer service.
+          See what our satisfied customers are saying about our services.
+        </div>
+      </div>
+      <div class="second">
+        <div class="review">
+          <div class="star">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+          </div>
+          <p>Rated 5 Stars in Reviews</p>
+        </div>
+        <div class="report">
+          <div class="star">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+          </div>
+          <p>Rated 5 Stars in Report Guru</p>
+        </div>
+        <div class="besttech">
+          <div class="star">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+            <img src="images/icon-star.svg" alt="Star Icon">
+          </div>
+          <p>Rated 5 Stars in BestTech</p>
+        </div>
+      </div>
+    </div>
+    <div class="patel">
+      <div class="colton profile">
+        <div class="bio">
+          <img src="images/image-colton.jpg" alt="Colton Smith Image">
+          <div class="detail">
+            <div class="name">Colton Smith</div>
+            <div class="verify">Verified Buyer</div>
+          </div>
+        </div>
+        <div class="data">
+          "We needed the same printed design as the one we had ordered a week prior.
+          Not only did they find the original order, but we also received it in time.
+          Excellent!"
+        </div>
+      </div>
+      <div class="irene profile">
+        <div class="bio">
+          <img src="images/image-irene.jpg" alt="Irene Roberts Image">
+          <div class="detail">
+            <div class="name">Irene Roberts</div>
+            <div class="verify">Verified Buyer</div>
+          </div>
+        </div>
+        <div class="data">
+          "Customer service is always excellent and very quick turn around. Completely
+          delighted with the simplicity of the purchase and the speed of delivery."
+        </div>
+      </div>
+      <div class="anne profile">
+        <div class="bio">
+          <img src="images/image-anne.jpg" alt="Anne Wallace Image">
+          <div class="detail">
+            <div class="name">Anne Wallace</div>
+            <div class="verify">Verified Buyer</div>
+          </div>
+        </div>
+        <div class="data">
+          "Put an order with this company and can only praise them for the very high
+          standard. Will definitely use them again and recommend them to everyone!"
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
